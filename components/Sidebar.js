@@ -39,7 +39,7 @@ function Sidebar() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className=" fixed  sm:static bottom-0 border-t sm:border-none flex flex-col justify-between sm:min-h-screen items-start py-3">
+    <div className=" fixed  sm:static bottom-0 border-t sm:border-none flex flex-col justify-between  items-start py-3">
       {mounted && (
         <div className="flex flex-col">
           <div className=" flex sm:flex-col sm:w-auto w-screen justify-around overflow-hidden space-y-0 my-3 ">
@@ -58,7 +58,7 @@ function Sidebar() {
           </div>
         </div>
       )}
-      <Profile />
+      <Profile className="absolute bottom-3" />
     </div>
   );
 }

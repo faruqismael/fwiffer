@@ -1,9 +1,11 @@
 import { MdMoreHoriz } from "react-icons/md";
 import { BiUser } from "react-icons/bi";
 
-function Profile() {
+function Profile({ className }) {
   return (
-    <div className="hidden sm:flex items-center justify-between space-x-3 hover:rounded-full hover:bg-gray-100 dark:hover:bg-gray-900  cursor-pointer px-4 py-2">
+    <div
+      className={`${className} hidden sm:flex items-center justify-between space-x-3 hover:rounded-full hover:bg-gray-100 dark:hover:bg-gray-900  cursor-pointer px-4 py-2`}
+    >
       <div className="flex items-center ">
         <BiUser className="text-5xl" />
         <div className="flex flex-col">

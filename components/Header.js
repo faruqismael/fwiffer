@@ -17,7 +17,7 @@ function Header() {
   };
 
   return (
-    <div className="flex  items-center text-xl">
+    <div className="flex justify-start sm:justify-between items-center text-xl h-16">
       <Logo className="sm:hidden" />
       <div className="flex justify-between w-full px-5">
         <h4 className="text-2xl font-semibold">Home</h4>
