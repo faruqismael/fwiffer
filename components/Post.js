@@ -9,6 +9,7 @@ import { BiWorld } from "react-icons/bi";
 import { MdLeaderboard, MdOutlineLocationOn } from "react-icons/md";
 import Button from "./Button";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 
 function PostButton({ Icon }) {
   return (
@@ -19,12 +20,16 @@ function PostButton({ Icon }) {
 }
 
 function Post() {
+  const { data: session } = useSession();
+
   const [showWorldIcon, setShowWorldIcon] = useState(false);
+
   return (
     <div className="flex px-[2rem] py-[1rem] gap-4 flex-col border-b dark:border-white/20   ">
       <div className="flex items-center space-x-3">
         <Image
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUjU3DlyoO6bnbe7eYmtBMvZHjCopEieKuA&usqp=CAU"
+          src={session?.user?.image}
+          // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUjU3DlyoO6bnbe7eYmtBMvZHjCopEieKuA&usqp=CAU"
           alt="profile"
           height={50}
           width={50}

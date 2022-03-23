@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    // fontFamily: {
+    //   main: ["Arimo", "sans"],
+    // },
   },
   plugins: [],
 };

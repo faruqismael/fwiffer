@@ -17,23 +17,27 @@ function FeedCard() {
   );
 }
 
-function Trends() {
+function Trends({ sticky }) {
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 rounded-xl py-2">
+    <div
+      className={`${
+        sticky && "sticky top-16"
+      } bg-gray-100 dark:bg-gray-800 rounded-xl py-2`}
+    >
       <h3 className="font-[750] opacity-80 text-lg px-4">Trends for you</h3>
       <div className="flex flex-col ">
         <FeedCard />
         <FeedCard />
         <FeedCard />
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
-        <FeedCard />
+        {!sticky && (
+          <>
+            <FeedCard />
+            <FeedCard />
+            <FeedCard />
+            <FeedCard />
+            <FeedCard />
+          </>
+        )}
       </div>
     </div>
   );

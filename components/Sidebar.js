@@ -8,13 +8,14 @@ import {
   MdOutlineMailOutline,
   MdOutlineNotificationsNone,
 } from "react-icons/md";
-import { FiBookmark } from "react-icons/fi";
+import { FiBookmark, FiSearch } from "react-icons/fi";
 import { CgMoreVerticalO } from "react-icons/cg";
 
 import { useState, useEffect } from "react";
 import MenuLink from "./MenuLink";
 import Button from "./Button";
 import Profile from "./Profile";
+import { signIn, signOut } from "next-auth/react";
 
 function Sidebar() {
   const menus = [
@@ -25,11 +26,12 @@ function Sidebar() {
     },
     { title: "Explore", icon: RiHashtag },
     { title: "Notifications", icon: MdOutlineNotificationsNone },
+    { title: "Search", icon: FiSearch, onlyMobile: true, mobile: true },
     { title: "Messages", icon: MdOutlineMailOutline, mobile: true },
     { title: "Bookmarks", icon: FiBookmark },
     { title: "Lists", icon: IoMdListBox },
     { title: "Profile", icon: BiUser, mobile: true },
-    { title: "More", icon: CgMoreVerticalO, mobile: true },
+    { title: "More", icon: CgMoreVerticalO },
   ];
 
   const { theme, setTheme, resolvedTheme: currentTheme } = useTheme();
@@ -39,21 +41,30 @@ function Sidebar() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className=" fixed  sm:static bottom-0 border-t sm:border-none flex flex-col justify-between  items-start py-3">
+    <div className=" fixed  sm:static bottom-0 border-t dark:bg-black/90 bg-white/90 sm:border-none  flex flex-col justify-between  items-start py-3">
       {mounted && (
         <div className="flex flex-col">
-          <div className=" flex sm:flex-col sm:w-auto w-screen justify-around overflow-hidden space-y-0 my-3 ">
+          <div className=" flex sm:flex-col  sm:w-auto w-screen justify-around overflow-hidden gap-2 my-3 ">
             {menus.map((menu) => (
-              <MenuLink
-                key={menu.title}
-                Icon={menu.icon}
-                title={menu.title}
-                mobile={menu.mobile}
-              />
+              <>
+                <MenuLink
+                  key={menu.title}
+                  Icon={menu.icon}
+                  title={menu.title}
+                  mobile={menu.mobile}
+                />
+              </>
             ))}
+            <div className="" onClick={signOut}>
+              {" "}
+              <MenuLink key={"logout"} Icon={BiUser} title={"Log Out"} />
+            </div>
           </div>
 
-          <div className=" sm:flex fixed sm:static bottom-28 right-3">
+          <div
+            onClick={signIn}
+            className=" sm:flex fixed sm:static bottom-28 right-3"
+          >
             <Button title="Tweet" Icon={ImQuill} />
           </div>
         </div>
