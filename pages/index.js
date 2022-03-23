@@ -47,75 +47,17 @@ export default function Home({ session }) {
         <div className="flex-[30%] border-[.2px] dark:border-white/30 border-black/20 border-t-0">
           <Header />
           <Post />
+          {/* <Feed />
           <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
-          <Feed />
+          <Feed /> */}
           <div className="text-2xl p-10 max-w-[20vw]">
             <h1>
               {" "}
-              Day Two of my{" "}
+              Day Three(3) of my{" "}
               <span className="text-blue-400 font-bold uppercase ">
                 twitter clone
               </span>{" "}
-              build
+              build [ AUTHENTICATION ]
             </h1>
           </div>
         </div>
