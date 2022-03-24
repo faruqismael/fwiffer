@@ -7,13 +7,18 @@ function Logo({ className }) {
   const [mounted, setMounted] = useState(false);
   const isLight = currentTheme == "light";
 
+  useEffect(() => setMounted(true), []);
   return (
-    <BsTwitter
-      color={isLight ? "#1d9bf0 " : "white"}
-      className={`${className}  ${
-        isLight && "hover:bg-gray-200 hover:rounded-full"
-      } text-[4rem] p-3 cursor-pointer`}
-    />
+    <>
+      {mounted && (
+        <BsTwitter
+          color={isLight ? "#1d9bf0 " : "white"}
+          className={`${className}  ${
+            isLight && "hover:bg-gray-200 hover:rounded-full"
+          } text-[4rem] p-3 cursor-pointer`}
+        />
+      )}
+    </>
   );
 }
 

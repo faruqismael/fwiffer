@@ -17,7 +17,7 @@ function Header() {
   };
 
   return (
-    <div className="flex justify-start sm:justify-between items-center text-xl h-16 sticky top-0 z-50 bg-white/30 dark:bg-black/30  bg-blend-saturation  backdrop-blur-sm">
+    <div className="flex justify-start sm:justify-between items-center text-xl h-16 sticky top-0 z-50 bg-white/80 dark:bg-black/80  bg-blend-saturation  backdrop-blur-sm">
       <Logo className="sm:hidden" />
       <div className="flex justify-between w-full px-5">
         <h4 className="text-2xl font-semibold">Home</h4>

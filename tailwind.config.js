@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#1d9bf0",
+      },
+    },
     // fontFamily: {
     //   main: ["Arimo", "sans"],
     // },

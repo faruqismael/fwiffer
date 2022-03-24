@@ -29,7 +29,7 @@ function Sidebar() {
     { title: "Search", icon: FiSearch, onlyMobile: true, mobile: true },
     { title: "Messages", icon: MdOutlineMailOutline, mobile: true },
     { title: "Bookmarks", icon: FiBookmark },
-    { title: "Lists", icon: IoMdListBox },
+    // { title: "Lists", icon: IoMdListBox },
     { title: "Profile", icon: BiUser, mobile: true },
     { title: "More", icon: CgMoreVerticalO },
   ];
@@ -40,11 +40,14 @@ function Sidebar() {
 
   useEffect(() => setMounted(true), []);
 
+  // lovely name and nice country
+  // i am us soldier working as united nations peacekeeping troops in syria on war against terrorism, my dear wath is your occupation
+
   return (
-    <div className=" fixed  sm:static bottom-0 border-t dark:bg-black/90 bg-white/90 sm:border-none  flex flex-col justify-between  items-start py-3">
+    <div className=" fixed sm:static bottom-0 border-t dark:bg-black/90 bg-white/90 z-50 sm:border-none  flex flex-col justify-between  items-start py-3">
       {mounted && (
         <div className="flex flex-col">
-          <div className=" flex sm:flex-col  sm:w-auto w-screen justify-around overflow-hidden gap-2 my-3 ">
+          <div className=" flex sm:flex-col  sm:w-auto w-screen hover:overflow-y-scroll max-h-[60vh] scroll-m-0 justify-around overflow-hidden gap-2 my-3  ">
             {menus.map((menu) => (
               <>
                 <MenuLink

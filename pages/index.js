@@ -7,10 +7,12 @@ import { useEffect, useState } from "react";
 import Feed from "../components/Feed";
 import Header from "../components/Header";
 import Logo from "../components/Logo";
+import NewTweetsNumber from "../components/NewTweetsNumber";
 import Post from "../components/Post";
 import Search from "../components/Search";
 import Sidebar from "../components/Sidebar";
 import Trends from "../components/Trends";
+import Tweets from "../components/Tweets";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ session }) {
@@ -40,14 +42,17 @@ export default function Home({ session }) {
       </Head>
 
       <div className="md:flex justify-center md:px-36 min-h-[100vh]  dark:bg-[#000] dark:text-[#d4d6d6]">
-        <div className="sticky top-0  max-h-[100vh] overflow-hidden md:min-w-[15vw]">
+        <div className="md:sticky  top-0 !z-50  max-h-[100vh] overflow-hidden md:min-w-[15vw]">
           <Logo className="hidden sm:flex" />
           <Sidebar className="" />
         </div>
         <div className="flex-[30%] border-[.2px] dark:border-white/30 border-black/20 border-t-0">
           <Header />
           <Post />
-          {/* <Feed />
+          <NewTweetsNumber />
+          {/* <Feed /> */}
+          <Tweets />
+          {/* 
           <Feed />
           <Feed /> */}
           <div className="text-2xl p-10 max-w-[20vw]">
