@@ -9,11 +9,15 @@ import {
   getSession,
   signIn,
 } from "next-auth/react";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
-function home({ providers }) {
+function Home({ providers }) {
+  const { resolvedTheme, setTheme } = useTheme();
+
+  useEffect(() => setTheme("light"));
   return (
     <div className="flex h-[100vh]">
-      <script>console.log(window.innerWidth)</script>
       <div className="hidden md:flex  relative h-[100vh] w-[55vw]">
         <Image
           layout="fill"
@@ -90,4 +94,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default home;
+export default Home;
