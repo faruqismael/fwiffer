@@ -14,8 +14,8 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_SECRET,
     }),
     GithubProvider({
-      clientId: "Iv1.4c8200b396df53a3",
-      clientSecret: "349fba8ea679a206f0e722731b491a203964b5ac",
+      clientId: "37d217406674384ae7d5",
+      clientSecret: "1b7b54574a151fda77015c1aaae15a9a534e592d",
     }),
   ],
   pages: {
