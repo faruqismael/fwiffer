@@ -33,7 +33,7 @@ function Home({ providers }) {
           </h3>
           <div className="flex flex-col gap-8">
             <h3 className="text-3xl font-[Helvetica Neue] space-x-4 font-bold">
-              Join Twitter today
+              Join Twitter now
             </h3>
             <div className="flex flex-col gap-4 " onClick={signIn}>
               <LoginButton
